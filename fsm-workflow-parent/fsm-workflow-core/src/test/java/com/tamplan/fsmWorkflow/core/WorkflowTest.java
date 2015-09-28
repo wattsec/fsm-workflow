@@ -66,7 +66,6 @@ public class WorkflowTest {
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 	}
-
 	
 	@Before
 	public void setUp() throws Exception {
@@ -102,7 +101,6 @@ public class WorkflowTest {
             assertTrue(false);
         }catch(IllegalStateTransitionException e) {
             assertTrue(true);
-
         }
 
         workflowRuntimeService.handleEvent(provisioningService,

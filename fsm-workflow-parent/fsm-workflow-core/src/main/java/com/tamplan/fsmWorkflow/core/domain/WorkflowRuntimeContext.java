@@ -11,7 +11,6 @@ public class WorkflowRuntimeContext {
 	private Map<String, String> contextValues;
 	private String targetEntityId;
 	
-	
 	public WorkflowRuntimeContext() {
 		contextValues = new HashMap<String, String>();
 	}
@@ -31,7 +30,6 @@ public class WorkflowRuntimeContext {
 	public void setWorkflowVersion(WorkflowVersion workflowVersion) {
 		this.workflowVersion = workflowVersion;
 	}
-	
 	
 	public WorkflowVersion getWorkflowVersion() {
 		return workflowVersion;
