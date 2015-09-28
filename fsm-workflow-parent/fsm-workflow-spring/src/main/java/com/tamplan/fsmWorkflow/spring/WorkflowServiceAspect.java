@@ -44,8 +44,8 @@ public class WorkflowServiceAspect {
 			logger.info("workflow version found=" + workflowVersion);
 		}
 		
-		WorkflowRuntimeContext context = WorkflowRuntimeContext.initContext();
-		context.setWorkflowVersion(workflowVersion);
+//		WorkflowRuntimeContext context = WorkflowRuntimeContext.initContext();
+//		context.setWorkflowVersion(workflowVersion);
 		
 	}
 	

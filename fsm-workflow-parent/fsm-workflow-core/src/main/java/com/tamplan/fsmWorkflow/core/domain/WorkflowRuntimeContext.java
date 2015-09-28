@@ -11,27 +11,9 @@ public class WorkflowRuntimeContext {
 	private Map<String, String> contextValues;
 	private String targetEntityId;
 	
-	private final static ThreadLocal<WorkflowRuntimeContext> threadLocal;
-	static {
-		threadLocal = new ThreadLocal<WorkflowRuntimeContext>();
-	}
 	
-	private WorkflowRuntimeContext() {
+	public WorkflowRuntimeContext() {
 		contextValues = new HashMap<String, String>();
-	}
-	
-	public static WorkflowRuntimeContext getCurrentContext() {
-		return threadLocal.get();
-	}
-	
-	public static void clearContext() {
-		threadLocal.set(null);
-	}
-	
-	public static WorkflowRuntimeContext initContext() {
-		threadLocal.set(new WorkflowRuntimeContext());
-		
-		return getCurrentContext();
 	}
 	
 	public void setTargetEntityId(String targetEntityId) {
@@ -39,7 +21,6 @@ public class WorkflowRuntimeContext {
 			throw new TargetEntityAlreadySetException(this.targetEntityId, targetEntityId);
 		}
 		
-		//TODO check if it is legal to set 
 		this.targetEntityId = targetEntityId;
 	}
 	
@@ -56,11 +37,9 @@ public class WorkflowRuntimeContext {
 		return workflowVersion;
 	}
 	
-	
 	public void addContextValue(String key, String value) {
 		
 	}
-	
 	
 	public Map<String, String> getContextValues() {
 		return contextValues;

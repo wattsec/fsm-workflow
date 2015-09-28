@@ -91,7 +91,7 @@ public class WorkflowTest {
         WorkflowRuntimeService workflowRuntimeService = new WorkflowRuntimeService();
         workflowRuntimeService.setEm(em);
         
-        WorkflowRuntimeContext workflowRuntimeContext = WorkflowRuntimeContext.initContext();
+        WorkflowRuntimeContext workflowRuntimeContext = new WorkflowRuntimeContext();
         workflowRuntimeContext.setTargetEntityId("1");
         workflowRuntimeContext.setWorkflowVersion(provisioningService.findWorkflowVersionBy("W#1", 1));
 
