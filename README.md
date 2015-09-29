@@ -1,5 +1,5 @@
 # Overview
-This is an library for using SCXML(http://commons.apache.org/proper/commons-scxml/) for persistent workflows using JPA.
+This is a library for using SCXML(http://commons.apache.org/proper/commons-scxml/) as persistent workflows using JPA.
 
 # Documentation
 A short blog entry about the library is [available][blogLink].
